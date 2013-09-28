@@ -1,8 +1,0 @@
-#N canvas 432 154 516 324 10;
-#X obj 171 134 ssampler~;
-#X obj 151 272 stereo-out~;
-#X text 20 27 SIMPLE SAMPLER: SSAMPLER~;
-#X text 20 60 This is an abstraction for a simple sampler \, which
-streams a file from the harddisk (with readsf~) and loops it !;
-#X connect 0 0 1 0;
-#X connect 0 1 1 1;
