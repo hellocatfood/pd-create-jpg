@@ -1,0 +1,57 @@
+#N canvas 125 186 899 398 10;
+#X obj 8 6 cnv 15 870 30 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 8 46 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X obj 8 347 cnv 15 870 30 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 668 349 Copyright Ben Bogart 2005 \; (See COPYING.TXT for details)
+;
+#N canvas 0 22 490 340 META 0;
+#X text 12 5 CATEGORY: tutorial;
+#X text 12 15 KEYWORDS: Gem gemwin;
+#X restore 16 353 pd META;
+#X obj 108 313 gemwin;
+#X obj 124 196 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 134 219 create;
+#X msg 143 241 destroy;
+#X msg 150 264 dimen 400 400;
+#X text 13 46 What is Gem?;
+#X text 13 115 This section deals with the particular objects related
+to the Gem visual library. Gem uses the usual PD "control" objects
+\, as well as a set of Gem-specific objects. First I'm going to introduce
+the most important Gem object \, the "gemwin".;
+#X text 12 20 DESCRIPTION: Introduction to the gemwin object;
+#X text 144 197 Rendering on: "1" \, off: "0";
+#X text 192 218 Open render window;
+#X text 211 240 Close render window;
+#X text 251 287 Window background;
+#X text 251 264 Window size;
+#X text 459 282 For more info see: gemwin-help.pd;
+#X text 12 8 1 Introduction to Gem (Graphics Environment for Multimedia)
+;
+#X msg 161 287 color 1 1 0;
+#X text 12 71 Gem is the OpenGL (graphics) library for PD. Gem allows
+you to work with live video \, video files and still images all in
+a real-time 3D environment.;
+#X text 458 45 The "gemwin" object handles many different messages.
+We're only going to discuss six of them for now. "gemwin" is the object
+that controls the gem render window. It handles messages to: open the
+window "create" \, close the window "destroy" \, start rendering "1"
+\, stop rendering "0" \, set the window size "dimen" and to set the
+window background colour "color" (Note the American spelling of "colour").
+;
+#X text 457 147 Just like objects have arguments some messages also
+have arguments. The "dimen" message expects two arguments for the horizontal
+and vertical size of the window. "color" expects three arguments -
+the amount of red \, green and blue in the background color. Note that
+the RGB values accepted in Gem go from 0-minimum to 1-maximum. You
+have to set the properties of the window before you open it with the
+exception of "color" (it can be changed after the window has been created).
+The gemwin to the left creates a red window.;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 20 0 5 0;

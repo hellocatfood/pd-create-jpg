@@ -1,0 +1,27 @@
+#N canvas 340 457 450 300 10;
+#X obj 259 204 table \$0.noise 259;
+#X obj 279 89 noise~;
+#X obj 291 119 tabwrite~ \$0.noise;
+#X obj 346 78 loadbang;
+#X obj 75 57 tabosc4~ \$0.noise;
+#X obj 83 132 *~;
+#X obj 106 103 vline~;
+#X msg 112 81 1 0.4 \, 0.5 8 0.4 \, 0 18 8.4;
+#X obj 76 9 inlet;
+#X obj 162 18 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 151 146 line~;
+#X obj 74 159 outlet~;
+#X msg 153 122 28 \, 22 18;
+#X text 187 143 28Hz to 22Hz in 18ms;
+#X connect 1 0 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 11 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 9 0 12 0;
+#X connect 10 0 4 0;
+#X connect 12 0 10 0;

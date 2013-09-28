@@ -1,0 +1,24 @@
+#N canvas 92 154 643 327 10;
+#X obj 41 70 osc~ 440;
+#X obj 41 46 mtof;
+#X obj 44 21 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 42 187 *~;
+#X obj 58 153 osc~ 5;
+#X floatatom 58 131 5 0 0 1 modulating_frequency - -;
+#X text 202 192 Remember that the output of an [osc~] goes between
+-1 and 1 Here \, we use the output of one [osc~] to modulate the amplitude
+of another. The effect ranges from a slow tremelo to a "ring modulation"
+effect with a noticeable sideband frequency.;
+#X text 229 22 AMPLITUDE MODULATION SYNTHESIS;
+#X obj 61 107 hsl 128 15 0.1 50 1 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 43 260 stereo-out~;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 9 0;
+#X connect 3 0 9 1;
+#X connect 4 0 3 1;
+#X connect 5 0 4 0;
+#X connect 8 0 5 0;

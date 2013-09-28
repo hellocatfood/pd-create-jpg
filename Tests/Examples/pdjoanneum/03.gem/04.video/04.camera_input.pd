@@ -1,0 +1,42 @@
+#N canvas 114 181 769 258 10;
+#X msg 17 19 create;
+#X msg 34 44 destroy;
+#X obj 74 98 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X msg 56 70 reset;
+#X obj 120 77 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X msg 120 95 lighting \$1;
+#X obj 17 133 gemwin 50;
+#X obj 298 82 pix_video;
+#X obj 298 43 gemhead;
+#X obj 298 24 tgl 15 0 empty renderinit empty 0 -6 0 8 -262144 -1 -1
+0 1;
+#X obj 298 172 pix_texture;
+#X msg 335 143 quality \$1;
+#X obj 335 124 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 425 124 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 425 143 mode \$1;
+#X obj 298 204 rectangle 3 2;
+#X msg 366 32 dimen 320 240;
+#X msg 485 31 dimen 640 480;
+#X text 405 82 IEEE1394/Firewire \, video4linux devices (incl. USB)
+;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 15 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X connect 16 0 7 0;
+#X connect 17 0 7 0;

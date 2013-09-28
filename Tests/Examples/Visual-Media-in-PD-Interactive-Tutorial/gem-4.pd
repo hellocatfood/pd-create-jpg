@@ -1,0 +1,114 @@
+#N canvas 270 93 890 532 10;
+#X obj 8 6 cnv 15 870 30 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 8 487 cnv 15 870 30 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 668 489 Copyright Ben Bogart 2005 \; (See COPYING.TXT for details)
+;
+#N canvas 0 22 490 340 META 0;
+#X text 12 5 CATEGORY: tutorial;
+#X text 12 15 KEYWORDS: Gem sphere pix_texture pix_image;
+#X restore 16 493 pd META;
+#X obj 460 275 gemwin;
+#X obj 460 183 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 495 183 create;
+#X msg 495 203 destroy;
+#X msg 495 225 dimen 400 400;
+#X msg 495 247 color 1 0 0;
+#X floatatom 690 258 3 -20 2.9 0 - - -;
+#X text 12 20 DESCRIPTION: pix_image \, pix_texture & sphere;
+#X obj 602 118 cnv 15 130 70 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X obj 611 96 gemhead;
+#X obj 611 214 colorRGB 0 0 1 1;
+#X floatatom 637 196 3 0 1 0 - - -;
+#X floatatom 664 196 3 0 1 0 - - -;
+#X floatatom 691 196 3 0 1 0 - - -;
+#X obj 611 235 alpha;
+#X floatatom 637 258 3 -4 4 0 - - -;
+#X floatatom 663 258 3 -4 4 0 - - -;
+#X obj 611 276 translateXYZ;
+#X floatatom 630 298 3 0 359 0 - - -;
+#X floatatom 653 298 3 0 359 0 - - -;
+#X floatatom 676 298 3 0 359 0 - - -;
+#X obj 611 316 rotateXYZ;
+#X floatatom 628 338 3 0 4 0 - - -;
+#X floatatom 651 338 3 0 4 0 - - -;
+#X floatatom 674 338 3 0 4 0 - - -;
+#X obj 611 355 scaleXYZ;
+#X obj 611 75 tgl 17 0 empty Objects_5-head empty 0 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 611 144 pix_image;
+#X obj 611 169 pix_texture;
+#X msg 621 122 open image.jpg;
+#X obj 611 411 sphere 2;
+#X floatatom 636 376 3 0 4 0 - - -;
+#X floatatom 662 394 3 4 50 0 - - -;
+#X text 690 392 Number of Faces;
+#X text 665 376 Size;
+#X text 15 315 The "sphere" object has one argument that is the initial
+size. "sphere" has three inlets. The second rightmost inlet defines
+the size of the sphere. The rightmost inlet defines how many sides
+(faces) the sphere has.;
+#X text 15 452 For more info see: pix_image-help.pd \, pix_texture-help.pd
+and sphere-help.pd;
+#X text 15 386 Note: You can load JPG and TIF files with pix_image.
+TIF files support alpha channels as long as the "alpha" object is in
+the chain. On some platforms the dimentions of the image must be 2^x
+(for example 64 \, 128 \, 256 \, 1024).;
+#X floatatom 718 196 3 0 1 0 - - -;
+#X text 14 221 The "pix_image" object does not apply the image as a
+texture \, that is the job of "pix_texture". "pix_texture" simply takes
+the pix data and applies it as a texture to the entity. To apply the
+image.jpg file to the sphere below click on the "open image.jpg" message.
+;
+#X text 14 119 The "pix_image" object allows you to load an image-file.
+In order to tell it what image to load \, it understands the "open"
+message. This message has a single argument - the filename of the image
+file. The image should be in the same folder as the PD patch.;
+#X text 14 49 In this section we're learning a new set of objects that
+deal with images. The images that the pix_ objects deal with are applied
+as textures onto Gem entities.;
+#X obj 8 96 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X text 13 96 "pix_image";
+#X obj 8 196 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X text 13 196 "pix_texture";
+#X obj 8 296 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X text 13 296 "sphere";
+#X text 735 121 Click to load image;
+#X text 12 8 4 Introduction to Gem - How to apply images to shapes.
+;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 21 3;
+#X connect 13 0 31 0;
+#X connect 14 0 18 0;
+#X connect 15 0 14 1;
+#X connect 16 0 14 2;
+#X connect 17 0 14 3;
+#X connect 18 0 21 0;
+#X connect 19 0 21 1;
+#X connect 20 0 21 2;
+#X connect 21 0 25 0;
+#X connect 22 0 25 1;
+#X connect 23 0 25 2;
+#X connect 24 0 25 3;
+#X connect 25 0 29 0;
+#X connect 26 0 29 1;
+#X connect 27 0 29 2;
+#X connect 28 0 29 3;
+#X connect 29 0 34 0;
+#X connect 30 0 13 0;
+#X connect 31 0 32 0;
+#X connect 32 0 14 0;
+#X connect 33 0 31 0;
+#X connect 35 0 34 1;
+#X connect 36 0 34 2;
+#X connect 42 0 14 4;

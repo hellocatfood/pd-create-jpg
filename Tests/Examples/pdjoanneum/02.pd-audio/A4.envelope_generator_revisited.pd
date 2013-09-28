@@ -1,0 +1,86 @@
+#N canvas 134 67 512 399 10;
+#X text 16 10 Here is our "envelope generator" from the "events over
+time" and "subpatches and abstractions" sections.;
+#X obj 243 65 cnv 15 160 170 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 260 189 hsl 128 15 0 1000 0 0 decay empty decay -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 260 133 hsl 128 15 0 1000 0 0 sustain empty sustain -2 -6 0
+8 -262144 -1 -1 7600 1;
+#X obj 259 81 hsl 128 15 0 1000 0 0 attack empty attack -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 256 101 5 0 0 0 - - -;
+#X floatatom 257 153 5 0 0 0 - - -;
+#X floatatom 257 209 5 0 0 0 - - -;
+#X obj 23 76 bng 25 250 50 0 start_bang empty empty 0 -6 0 8 -258699
+-1 -1;
+#X text 73 62 <---The "start bang"!;
+#N canvas 227 107 690 591 envelope_generator 0;
+#X obj 26 390 outlet;
+#X obj 241 208 delay;
+#X msg 26 142 1;
+#X obj 26 348 line;
+#X obj 26 173 pack 0 0;
+#X obj 77 142 f;
+#X obj 292 262 f;
+#X obj 241 230 t b b;
+#X msg 241 262 0;
+#X obj 241 293 pack 0 0;
+#X obj 26 110 t b b;
+#X text 341 295 <---Last \, tell [line] to go to 0 in X ms.;
+#X text 428 391 derek@umatic.nl;
+#X obj 26 17 r start_bang;
+#X obj 160 17 r attack;
+#X obj 271 17 r sustain;
+#X obj 381 17 r decay;
+#X text 98 173 <---First \, tell [line] to go to 1 in attack ms.;
+#X obj 223 111 +;
+#X obj 230 68 t b f;
+#X text 338 208 <---Next \, [delay] holds the start bang for X ms.
+x is the sum of the attack and sustain times.;
+#X floatatom 230 144 5 0 0 0 - - -;
+#X text 273 62 this makes the adder output its answer even when it
+receives an input on its left (cold) input;
+#X connect 1 0 7 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 1;
+#X connect 6 0 9 1;
+#X connect 7 0 8 0;
+#X connect 7 1 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 2 0;
+#X connect 10 1 5 0;
+#X connect 13 0 10 0;
+#X connect 13 0 1 0;
+#X connect 14 0 5 1;
+#X connect 14 0 18 0;
+#X connect 15 0 19 0;
+#X connect 16 0 6 1;
+#X connect 18 0 21 0;
+#X connect 19 0 18 0;
+#X connect 19 1 18 1;
+#X connect 21 0 1 1;
+#X restore 90 140 pd envelope_generator;
+#X obj 90 173 pack 0 50;
+#X obj 90 204 line~;
+#X obj 27 140 mtof;
+#X obj 30 116 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 4200 1;
+#X obj 27 173 osc~ 440;
+#X obj 28 231 *~;
+#X obj 28 295 stereo-out~;
+#X connect 2 0 7 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 8 0 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 16 1;
+#X connect 13 0 15 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 0 17 1;

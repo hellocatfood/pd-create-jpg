@@ -1,0 +1,41 @@
+#N canvas 0 0 679 418 10;
+#X obj 41 198 osc~ 440;
+#X obj 41 330 *~;
+#X obj 42 367 dac~;
+#X obj 44 68 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 41 91 mtof;
+#X obj 57 252 dbtorms;
+#X floatatom 57 226 0 0 100 1 master_gain - -;
+#X obj 41 147 pack 0 50;
+#X obj 41 171 line;
+#X text 193 145 Recall [line] from the Control section \, and how it
+takes two numbers: target number and interpolation time. Here [line]
+is used to smooth out the transition between notes with an interpolation
+of 50 ms.;
+#X obj 57 280 pack 0 50;
+#X obj 57 304 line~;
+#X text 40 25 INTERPOLATING PITCH AND GAIN WITH [line] AND [line~].
+;
+#X msg 386 372 \; pd dsp \$1;
+#X obj 386 349 tgl 20 0 empty empty on/off 25 8 0 8 -258699 -1 -1 0
+1;
+#X text 191 289 [line~] also exists for audio signals. Notice the tilde
+for DSP objects. Here \, it is used to smooth out the changes in gain
+by interpolating them by 50 ms.;
+#X text 194 66 You may have noticed a "zipper noise" in the previous
+patches when changing values. This is because both pitch and gain were
+stepping between fixed intervals rather than smoothly ramping to the
+new setting.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 0 0;
+#X connect 10 0 11 0;
+#X connect 11 0 1 1;
+#X connect 14 0 13 0;

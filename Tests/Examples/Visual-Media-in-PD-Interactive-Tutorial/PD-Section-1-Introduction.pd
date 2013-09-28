@@ -1,0 +1,16 @@
+#N canvas 248 321 430 120 10;
+#X obj 0 0 cnv 15 430 120 empty empty S1-Introduction_To_Pure-Data
+5 8 0 12 -179884 -1 0;
+#X obj 14 22 pddp_open pure-data-1;
+#X obj 14 45 pddp_open pure-data-2;
+#X obj 14 68 pddp_open pure-data-3;
+#X obj 14 91 pddp_open pure-data-4;
+#X obj 180 23 cnv 15 15 15 empty empty Pure-Data_Introduction 20 8
+0 12 -43821 -1 0;
+#X obj 180 46 cnv 15 15 15 empty empty GUI_Objects_for_Interaction
+20 8 0 12 -43821 -1 0;
+#X obj 180 69 cnv 15 15 15 empty empty Creating_your_first_patch 20
+8 0 12 -43821 -1 0;
+#X obj 180 92 cnv 15 15 15 empty empty Control:metro_random_&_counter
+20 8 0 12 -43821 -1 0;
+#X coords 0 0 1 1 430 120 1;

@@ -1,0 +1,41 @@
+#N canvas 89 18 686 582 10;
+#X obj 42 88 delay 500;
+#X obj 135 88 delay 1000;
+#X msg 42 32 bang;
+#X obj 42 136 print first;
+#X obj 135 136 print second;
+#X obj 43 263 delay;
+#X floatatom 73 240 5 0 0 0 - - -;
+#X msg 43 197 2000;
+#X msg 85 197 200;
+#X obj 43 311 print third;
+#X text 132 237 Numbers to the cold side set the delay length without
+schedualling any action.;
+#X text 132 194 Numbers to the hot side set the delay and schedules
+the action.;
+#X text 262 88 [delay] outputs any "bang" sent to its hot inlet after
+a time in milliseconds specified by its creation argument.;
+#X text 229 495 derek@umatic.nl;
+#X obj 43 440 timer;
+#X msg 43 367 bang;
+#X obj 73 404 delay 333;
+#X floatatom 43 470 5 0 0 0 - - -;
+#X text 148 443 [timer] will tell you the interval between the hot
+and the cold inlet.;
+#X obj 143 404 delay 666;
+#X msg 143 367 bang;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 2 0 1 0;
+#X connect 5 0 9 0;
+#X connect 6 0 5 1;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 14 0 17 0;
+#X connect 15 0 14 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 1;
+#X connect 19 0 14 1;
+#X connect 20 0 14 0;
+#X connect 20 0 19 0;

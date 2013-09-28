@@ -1,0 +1,37 @@
+#N canvas 0 0 465 517 10;
+#X obj 9 10 cnv 15 430 30 empty empty PD-AudioWorshop 8 15 0 20 -128992
+-262144 0;
+#X obj 10 338 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X text 13 554 For any more questions don't hesitate to contact me:
+;
+#X obj 10 152 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X text 16 599 Enjoy :) !;
+#X text 12 59 We will try to learn the basics of how to deal with sound
+in Pure Data ...;
+#X text 28 212 - basic introduction (A);
+#X text 28 226 - filters (B);
+#X text 28 240 - classical audio synthesis (C);
+#X text 28 254 - samplers and arrays (D);
+#X text 28 268 - delays (E);
+#X text 28 282 - frequency domain (FFT) effects (F);
+#X text 15 338 more information;
+#X text 11 177 All the patches are in this directory and prefixed with
+A \, B \, ... according to the topics:;
+#X text 10 366 If you want to learn more \, check out the following:
+;
+#X text 25 388 - help patches of pd itself (in the 3.audio.examples
+category);
+#X text 26 465 - tutorial patches at http://puredata.info;
+#X obj 10 512 cnv 15 430 15 empty empty empty 20 12 0 14 -179884 -66577
+0;
+#X text 15 512 contact;
+#X text 11 93 The following patches are a collection of tutorials from
+the net \, pd help patches and some by me.;
+#X text 28 295 - signal analysis (G);
+#X text 79 574 Georg Holzmann \, grh _AT_ mur _DOT_at;
+#X text 25 420 - Millers Puckettes free book about audio processing
+and Pd (http://crca.ucsd.edu/~msp/techniques.htm) \, for the technicians
+... :);
+#X text 15 152 topics;

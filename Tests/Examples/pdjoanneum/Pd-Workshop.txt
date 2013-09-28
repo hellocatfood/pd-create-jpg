@@ -1,0 +1,67 @@
+
+HOW TO BECOME A PUREDATA/GEM PROFESSIONAL
+Workshop FH Joanneum
+June 2010
+
+Link to the (updated) workshop page:
+http://grh.mur.at/blog/pd-workshop-joanneum
+
+Georg Holzmann
+grh _at_ mur _dot_ at
+http://grh.mur.at
+
+
+
+GENERAL PD INTRODUCTION (01.pd-control):
+- 01.basics: hot, cold inlets; order of operations
+- 02.events_over_time: counters, delays, lines, sequencer example
+- 03.math_and_logic_operations: conditional tests, arithmetic, random
+- 04.subpatches_and_abstractions: subpatches, send/receive, abstractions
+
+
+GEM INTRODUCTION (03.gem):
+- 01.basics: gemwin, Geos
+- 03.texture_processing: textures, gain, combination of images, pix effects
+- 04.video: pix_film, perspective, video mixer, camera input, video effects
+- 05.muppet_show/showcase: 3D objects in 03.army_of_buddies.pd + 04.singalong.pd
+
+
+AUDIO INTRODUCTION (02.pd-audio):
+- general infos about digital audio
+- simple audio generators and modulators
+- samplers
+- filters, effects and FFT
+- pitch and beat detection: G1, G2, G3
+
+
+MOTION DETECTION AND TRACKING (03.gem/06.tracking):
+- 01-02: movement extraction with delay and pix_movement
+- 03-04: motion tracking and movement detection with pix_blob
+- 05: motion tracking by comparing to a static background
+- 06: tracking with fiducial markers from the reacTIVision project (as used in the reacTable), the markers are also included (see fiducials.pdf)
+- 07: more advanced tracking, object recognition, face detection, ... algorithms are available through the OpenCV library - see http://hangar.org/wikis/lab/doku.php?id=start:puredata_opencv
+
+
+WE BUILD A SMALL PROJECT TOGETHER:
+- Videolooper, loops from a specific point
+- Control the looper with audio (e.g. base drum), movement detection, fiducial markers (reacTable), keyboard, ...
+- student suggestions
+
+
+
+FURTHER MATERIALS:
+
+- Download the software for your operation system at http://puredata.info/downloads, or for the latest development version use http://autobuild.puredata.info/auto-build/
+
+- Go through the patches which come with Pd: Help -> Browser -> Manuals: here you will find Intro, Sound, Image (GEM), ...
+
+- Use Pd's help: right click -> Help on any object should give you the documentation for this object, right click -> Help on an empty patch shows you a list of all internal Pd objects
+
+- Further documentation and tutorials can be found at http://puredata.info/docs
+
+- Special documentation and info for GEM is at http://gem.iem.at/documentation/ and go through the patches in 04.gem-advanced
+
+- Ask any kind of questions at the Pd mailinglist, the main communication channel for Pure Data: http://lists.puredata.info/listinfo/pd-list (english)
+
+- Become a member of the local pd~graz Verein (http://pd-graz.mur.at) and discuss your ideas/problems - we also have a mailing list in german at http://lists.mur.at/mailman/listinfo/pd-graz
+

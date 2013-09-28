@@ -1,0 +1,49 @@
+#N canvas 70 39 699 546 10;
+#X obj 169 55 openpanel;
+#X obj 169 118 soundfiler;
+#X floatatom 199 150 0 0 0 1 table_length_in_samples - -;
+#X obj 31 448 tabread4~ third_sound;
+#X obj 221 449 table third_sound;
+#X msg 169 87 read -resize \$1 third_sound;
+#X obj 169 19 bng 25 250 50 0 empty empty 1st_load_the_file 0 -6 0
+10 -62784 -1 -1;
+#X obj 30 169 bng 25 250 50 0 empty empty then_playback_the_file 0
+-6 0 10 -258699 -1 -1;
+#X obj 30 392 line~;
+#X obj 30 365 pack 0 0;
+#X obj 199 308 / 44.1;
+#X obj 30 328 f;
+#X obj 169 285 t f f;
+#X text 270 310 <---remember to change to 48 for 48KHz sampling rate!
+;
+#X obj 30 202 t b b;
+#X msg 60 243 0;
+#X text 105 244 <---first set [line~] to zero \, then send target;
+#X text 101 366 <---tell [line~] to go to x-sample in y-miliseconds
+;
+#X text 246 286 <---first gives time \, then target \, for [line~]
+object;
+#X obj 31 419 +~ 1;
+#X text 285 14 This patch plays back the sample once every time the
+playback button gets banged. It does this by telling [line~] to go
+the the last sample of the file in (filelength in samples/44.1) miliseconds.
+;
+#X obj 31 482 stereo-out~;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 1 0 12 0;
+#X connect 3 0 21 0;
+#X connect 3 0 21 1;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 14 0;
+#X connect 8 0 19 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 1;
+#X connect 11 0 9 0;
+#X connect 12 0 11 1;
+#X connect 12 1 10 0;
+#X connect 14 0 11 0;
+#X connect 14 1 15 0;
+#X connect 15 0 8 0;
+#X connect 19 0 3 0;

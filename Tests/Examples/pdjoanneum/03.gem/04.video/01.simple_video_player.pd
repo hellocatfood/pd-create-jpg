@@ -1,0 +1,88 @@
+#N canvas 62 80 788 427 10;
+#X msg 17 19 create;
+#X msg 34 44 destroy;
+#X obj 74 98 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X msg 56 70 reset;
+#X obj 17 165 loadbang;
+#X msg 17 189 \; renderinit 0;
+#X obj 17 133 gemwin 50;
+#X obj 220 43 gemhead;
+#X obj 220 335 pix_texture;
+#X obj 220 24 tgl 15 0 empty renderinit empty 0 -6 0 8 -262144 -1 -1
+1 1;
+#X msg 372 61 open \$1;
+#X obj 372 40 openpanel;
+#X obj 372 22 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 220 366 rectangle 4 3;
+#X obj 220 189 pix_film;
+#N canvas 67 224 450 432 :: 0;
+#X text 24 16 the format [pix_film] is able to decode depends on the
+system you are running Gem.;
+#X text 30 101 Win32: [pix_film] should be able to decode AVIs (all
+installed codecs). If you are lucky and your version of Gem is compiled
+with quicktime-support and you have quicktime installed on your machine
+\, you might be able to play back quicktime MOVs.;
+#X text 31 63 macOS-X: [pix_film] should be ablte to decode quicktime
+MOVs.;
+#X text 32 175 linux: that's a bit tricky. Since there is no "native"
+video-format for linux it heavily depends on what you have installed
+on your machine and how Gem has been compiled. If your system supports
+it \, [pix_film] is able to use quicktime4linux/libquicktime to decode
+quicktime-MOVs \, libmpeg1/libmpeg3 to decode MPEG2-videos and libaviplay
+which opens a wide range of supported formats (with the possibility
+to install additional codec-plugins) \, from AVI via MPEG2 to DivX
+\, although i have found MPEG support rather unstable. libaviplay does
+not support quicktime decoding. There is also some ruddy ffmpeg support
+(apart from the one supplied by libaviplay).;
+#X text 36 351 although one wouldn't believe it \, but i have found
+that iunder linux i could play most formats...;
+#X restore 560 349 pd :: FORMATS;
+#X text 394 323 [pix_film] handles Quicktime \, AVI \, MPEG3. Open
+the subpatch below to see more info...;
+#X msg 238 102 open ../../06.data/03.video/Skisprung.avi;
+#X msg 286 63 auto \$1;
+#X obj 288 45 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 319 151 5 0 0 0 - - -;
+#X obj 250 222 unpack 0 0 0;
+#X floatatom 236 245 5 0 0 3 length - -;
+#X floatatom 285 245 5 0 0 3 width - -;
+#X floatatom 335 245 5 0 0 3 height - -;
+#X obj 280 190 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 304 189 0;
+#X obj 411 187 line;
+#X msg 396 145 0;
+#X msg 433 145 0 \, 20 1000;
+#X floatatom 415 210 5 0 0 0 - - -;
+#X msg 465 171 0 \, 800 3000;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 7 0 14 0;
+#X connect 8 0 13 0;
+#X connect 9 0 7 0;
+#X connect 10 0 14 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 14 0 8 0;
+#X connect 14 1 21 0;
+#X connect 14 2 25 0;
+#X connect 17 0 14 0;
+#X connect 18 0 14 0;
+#X connect 19 0 18 0;
+#X connect 20 0 14 1;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 21 2 24 0;
+#X connect 25 0 26 0;
+#X connect 26 0 14 1;
+#X connect 27 0 14 1;
+#X connect 27 0 30 0;
+#X connect 28 0 27 0;
+#X connect 29 0 27 0;
+#X connect 31 0 27 0;

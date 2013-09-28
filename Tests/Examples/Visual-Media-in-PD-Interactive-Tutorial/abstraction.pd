@@ -1,0 +1,7 @@
+#N canvas 673 459 321 228 12;
+#X text 15 9 This is an Abstraction;
+#X obj 26 64 loadbang;
+#X obj 26 91 pack \$1 \$2 \$3 \$4 \$5;
+#X obj 26 119 s output;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

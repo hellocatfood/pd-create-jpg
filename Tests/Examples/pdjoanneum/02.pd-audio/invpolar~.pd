@@ -1,0 +1,15 @@
+#N canvas 667 286 310 302 10;
+#X obj 29 70 inlet~;
+#X obj 230 74 inlet~;
+#X obj 30 248 outlet~;
+#X obj 221 248 outlet~;
+#X obj 64 158 expr~ $v1*cos($v2) \; $v1*sin($v2);
+#X text 42 52 R;
+#X text 241 58 Phi;
+#X text 50 267 Re;
+#X text 233 270 Im;
+#X text 41 21 polar to rectangular coordinates;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;

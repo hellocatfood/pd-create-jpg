@@ -1,0 +1,39 @@
+#N canvas 0 0 518 528 10;
+#X text 126 9 SWEEPING FILTERS;
+#X obj 179 291 +~;
+#X floatatom 201 266 5 0 100 0 - #0-offset -;
+#X floatatom 180 142 5 0 0 0 - #0-speed -;
+#X floatatom 202 213 5 0 100 0 - #0-depth -;
+#X floatatom 85 426 5 0 1000 0 - #0-q -;
+#X obj 44 426 vcf~;
+#X text 137 425 <-- Q (selectivity);
+#X text 232 141 <-- sweep speed;
+#X text 257 165 LFO for sweep;
+#X text 254 214 <-- sweep depth;
+#X text 251 266 <-- base center frequency;
+#X text 223 290 add base to sweep;
+#X text 226 379 convert to Hz.;
+#X obj 180 238 *~;
+#X text 13 34 If you want actively changing center frequencies \, use
+"vcf~" instead of "bp~". The vcf~ module takes an audio signal to set
+center frequency. (Q is still set by messages though.) Vcf is computationally
+somewhat more expensive than bp~.;
+#X obj 43 457 stereo-out~;
+#X obj 179 375 mtof~;
+#X obj 43 153 ssampler~;
+#X obj 180 164 phasor~;
+#X obj 243 335 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 239 355 sig~;
+#X connect 2 0 1 1;
+#X connect 3 0 19 0;
+#X connect 4 0 14 1;
+#X connect 5 0 6 2;
+#X connect 6 0 16 0;
+#X connect 6 0 16 1;
+#X connect 14 0 1 0;
+#X connect 17 0 6 1;
+#X connect 18 0 6 0;
+#X connect 19 0 14 0;
+#X connect 20 0 21 0;
+#X connect 21 0 17 0;

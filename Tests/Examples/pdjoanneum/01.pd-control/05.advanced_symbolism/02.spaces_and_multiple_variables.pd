@@ -1,0 +1,117 @@
+#N canvas 268 36 584 625 10;
+#X text 25 19 Instead of using spaces \, an underscore will often produce
+a tolerable compromise.;
+#X obj 210 40 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 210 64 f;
+#X symbolatom 210 119 0 0 0 0 - - -;
+#X obj 243 64 + 1;
+#X obj 210 91 makefilename I_am_%d_years_old.;
+#X text 28 143 With careful planning \, multiple variables can be incorporated
+using a stack of [makefilename]s. In the example below \, let's assume
+that this tool is used to generate file names for an audio loop recorder
+which operates 24 hours per day \, every day.;
+#X obj 31 235 loadbang;
+#X obj 31 280 metro 200;
+#X obj 31 261 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 64 305 + 1;
+#X obj 209 349 route 0 1 2 3 4 5 6;
+#X obj 31 354 mod 24;
+#X floatatom 31 379 5 0 0 0 - - -;
+#X floatatom 31 329 0 0 0 0 - - -;
+#X obj 31 305 f;
+#X obj 53 405 sel 0;
+#X obj 218 269 f;
+#X obj 250 269 + 1;
+#X obj 218 294 mod 7;
+#X obj 218 322 pack f f;
+#X obj 230 498 makefilename Monday_%d.wav;
+#X symbolatom 65 548 0 0 0 0 - - -;
+#X obj 334 374 makefilename Saturday_%d.wav;
+#X obj 314 399 makefilename Friday_%d.wav;
+#X obj 290 326 t b f;
+#X obj 293 424 makefilename Thursday_%d.wav;
+#X obj 272 449 makefilename Wednesday_%d.wav;
+#X obj 251 474 makefilename Tuesday_%d.wav;
+#X obj 209 522 makefilename Sunday_%d.wav;
+#X text 81 377 hour of day;
+#X text 79 330 total hours;
+#X text 199 549 Crude...but effective.;
+#X obj 31 455 s dayHour;
+#X obj 53 430 s weekDay;
+#X obj 218 236 r weekDay;
+#X obj 290 300 r dayHour;
+#X text 284 271 loop through weekdays;
+#N canvas 0 0 489 588 pddp 0;
+#X text 14 17 PDDP: Pure Data Documentation Project;
+#X text 25 40 The PDDP was proposed initially in early 2002 by Krzysztof
+Czaja who suggested that Pure Data was in need of comprehensive documentation.
+;
+#X text 45 162 - Michal Seta;
+#X text 45 135 - Miller Puckette;
+#X text 45 148 - Dave Sabine;
+#X text 25 89 The project is now managed un-officially by Dave Sabine
+who acts as primary author and editor. The people involved in this
+project include (alphabetically):;
+#X text 25 184 PDDP will eventually be available in the main PD distribution
+\, but for now is available at Dave's web site: http://www.davesabine.com/media/puredata.asp
+;
+#X text 25 231 All comments \, corrections \, etc. regarding the PDDP
+reference files should be directed to Dave Sabine: dave@davesabine.com
+;
+#X text 14 282 THINGS TO NOTE:;
+#X text 25 308 Authors: If you would like to participate in this project
+\, simply gather together information about objects \, tutorials \,
+examples \, etc. and contact Dave Sabine for info about formatting
+your documents. All documents should then be forwarded to Dave to be
+included in the PDDP download which is available at his web site.;
+#X text 25 396 Externals and other Libraries: Each PDDP document includes
+mention of "related objects from other PD libraries" as well as mention
+of "related native PD objects". The objects from other libraries are
+available only if you download those libraries from their respective
+authors and integrate them properly into your version of PD. We do
+not and cannot maintain a complete list of externals - but we try.
+For more info about externals and other objects \, see http://www.pure-data.org/
+and the Pure Data Base at http://iem.kug.ac.at/pdb/;
+#X restore 39 586 pd pddp;
+#X text 101 587 - Dave Sabine \, April 25 \, 2003;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 4 0 2 1;
+#X connect 5 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 15 0;
+#X connect 9 0 8 0;
+#X connect 10 0 15 1;
+#X connect 11 0 29 0;
+#X connect 11 1 21 0;
+#X connect 11 2 28 0;
+#X connect 11 3 27 0;
+#X connect 11 4 26 0;
+#X connect 11 5 24 0;
+#X connect 11 6 23 0;
+#X connect 12 0 13 0;
+#X connect 13 0 16 0;
+#X connect 13 0 33 0;
+#X connect 14 0 12 0;
+#X connect 15 0 10 0;
+#X connect 15 0 14 0;
+#X connect 16 0 34 0;
+#X connect 17 0 18 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 1;
+#X connect 19 0 20 0;
+#X connect 20 0 11 0;
+#X connect 21 0 22 0;
+#X connect 23 0 22 0;
+#X connect 24 0 22 0;
+#X connect 25 0 20 0;
+#X connect 25 1 20 1;
+#X connect 26 0 22 0;
+#X connect 27 0 22 0;
+#X connect 28 0 22 0;
+#X connect 29 0 22 0;
+#X connect 35 0 17 0;
+#X connect 36 0 25 0;

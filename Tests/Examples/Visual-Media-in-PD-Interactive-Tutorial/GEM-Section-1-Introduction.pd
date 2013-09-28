@@ -1,0 +1,19 @@
+#N canvas 0 22 430 145 10;
+#X obj 0 0 cnv 15 430 145 empty empty S2-Introduction_To_GEM-(Graphics_Evironment_for_Multimedia)
+5 8 0 12 -179884 -1 0;
+#X obj 170 23 cnv 15 15 15 empty empty Gem_Introduction 20 8 0 12 -43821
+-1 0;
+#X obj 170 46 cnv 15 15 15 empty empty What_Are_Gem-chains? 20 8 0
+12 -43821 -1 0;
+#X obj 170 69 cnv 15 15 15 empty empty Translate-Rotate-Scale 20 8
+0 12 -43821 -1 0;
+#X obj 14 22 pddp_open gem-1;
+#X obj 14 45 pddp_open gem-2;
+#X obj 14 68 pddp_open gem-3;
+#X obj 170 93 cnv 15 15 15 empty empty Applying_Images_Using_pix_Objects
+20 8 0 12 -43821 -1 0;
+#X obj 14 92 pddp_open gem-4;
+#X obj 170 118 cnv 15 15 15 empty empty Applying_Video_&_Free_Exploration
+20 8 0 12 -43821 -1 0;
+#X obj 14 117 pddp_open gem-5;
+#X coords 0 0 1 1 430 145 1;

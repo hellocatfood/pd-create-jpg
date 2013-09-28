@@ -1,0 +1,48 @@
+#N canvas 45 254 979 514 10;
+#X text 17 42 simple sampler;
+#X text 17 19 SSAMPLER~;
+#X obj 262 209 openpanel;
+#X msg 261 238 set open \$1;
+#X msg 261 301 open /home/holzi/workshops/basic-audio/pd-audio/magic_loop.wav
+;
+#X obj 168 386 readsf~ 2;
+#X obj 50 195 sel 0;
+#X text 394 462 2007 \, Georg Holzmann \, <grh_at_mur_dot_at>;
+#X obj 105 132 tgl 25 0 empty empty play 2 -7 0 10 -260818 -1 -1 0
+1;
+#X obj 141 142 bng 15 250 50 0 empty empty load 17 7 0 10 -260818 -1
+-1;
+#X text 252 388 <- streams sample from harddisk !;
+#X obj 93 239 t b b b b;
+#X msg 180 330 0;
+#X msg 140 330 1;
+#X obj 35 281 t b b;
+#X obj 53 403 spigot;
+#X msg 72 368 1;
+#X msg 106 368 0;
+#X obj 125 441 outlet~;
+#X obj 199 441 outlet~;
+#X obj 116 73 inlet;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 18 0;
+#X connect 5 1 19 0;
+#X connect 5 2 15 0;
+#X connect 6 0 14 0;
+#X connect 6 1 11 0;
+#X connect 8 0 6 0;
+#X connect 9 0 2 0;
+#X connect 11 0 16 0;
+#X connect 11 1 13 0;
+#X connect 11 2 4 0;
+#X connect 11 3 12 0;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 17 0;
+#X connect 14 1 12 0;
+#X connect 15 0 11 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 1;
+#X connect 20 0 8 0;
+#X coords 0 -1 1 1 85 60 1 100 100;

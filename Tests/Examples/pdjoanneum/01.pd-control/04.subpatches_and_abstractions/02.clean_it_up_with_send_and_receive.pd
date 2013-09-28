@@ -1,0 +1,89 @@
+#N canvas 165 74 543 530 10;
+#X obj 280 261 cnv 15 160 170 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 297 385 hsl 128 15 0 1000 0 0 decay empty decay -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 297 329 hsl 128 15 0 1000 0 0 sustain empty sustain -2 -6 0
+8 -262144 -1 -1 0 1;
+#X obj 296 277 hsl 128 15 0 1000 0 0 attack empty attack -2 -6 0 8
+-262144 -1 -1 0 1;
+#X floatatom 308 297 5 0 0 0 - - -;
+#X floatatom 309 349 5 0 0 0 - - -;
+#X floatatom 309 405 5 0 0 0 - - -;
+#X obj 12 369 print;
+#X floatatom 56 369 5 0 0 0 - - -;
+#X obj 12 267 bng 25 250 50 0 start_bang empty empty 0 -6 0 8 -258699
+-1 -1;
+#X text 60 273 <---The "start bang"!;
+#X text 281 443 derek@umatic.nl;
+#X text 16 1 You can do "wireless communication" with [send] and [receive]
+pairs.;
+#X obj 21 61 send cat;
+#X obj 21 86 receive cat;
+#X floatatom 21 39 5 0 0 0 - - -;
+#X floatatom 21 112 5 0 0 0 - - -;
+#X obj 137 35 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 134 113 5 0 0 0 - - -;
+#X obj 297 35 hsl 128 15 0 127 0 0 hamster empty sends_hamster -2 -6
+0 8 -262144 -1 -1 0 1;
+#X text 295 51 Right-click for properties!;
+#X floatatom 294 113 5 0 0 0 - - -;
+#X obj 367 86 hsl 128 15 0 127 0 0 empty hamster receives_hamster -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 134 61 s dog;
+#X obj 134 86 r dog;
+#X obj 294 86 r hamster;
+#X text 20 241 So \, here we've gotten rid of all the wires:;
+#N canvas 311 107 678 579 this_is_also_a_subpatch 0;
+#X obj 26 390 outlet;
+#X obj 241 208 delay;
+#X msg 26 142 1;
+#X obj 26 348 line;
+#X obj 26 173 pack 0 0;
+#X obj 77 142 f;
+#X obj 292 262 f;
+#X obj 241 230 t b b;
+#X msg 241 262 0;
+#X obj 241 293 pack 0 0;
+#X obj 26 110 t b b;
+#X text 338 208 <---Next \, [delay] holds the start bang for X ms.
+;
+#X text 98 173 <---First \, tell [line] to go to 1 in X ms.;
+#X text 341 295 <---Last \, tell [line] to go to 0 in X ms.;
+#X text 428 391 derek@umatic.nl;
+#X obj 26 17 r start_bang;
+#X obj 160 17 r attack;
+#X obj 271 17 r sustain;
+#X obj 381 17 r decay;
+#X connect 1 0 7 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 1;
+#X connect 6 0 9 1;
+#X connect 7 0 8 0;
+#X connect 7 1 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 2 0;
+#X connect 10 1 5 0;
+#X connect 15 0 10 0;
+#X connect 15 0 1 0;
+#X connect 16 0 5 1;
+#X connect 17 0 1 1;
+#X connect 18 0 6 1;
+#X restore 12 336 pd this_is_also_a_subpatch;
+#X text 19 154 Notice that [send] and [receive] can be abbreviated
+to [s] and [r]. The creation argument is the name of the "channel"
+the pair uses.;
+#X connect 1 0 6 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 14 0 16 0;
+#X connect 15 0 13 0;
+#X connect 17 0 23 0;
+#X connect 24 0 18 0;
+#X connect 25 0 21 0;
+#X connect 27 0 7 0;
+#X connect 27 0 8 0;

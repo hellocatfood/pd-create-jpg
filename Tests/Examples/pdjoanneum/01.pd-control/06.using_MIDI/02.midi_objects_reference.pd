@@ -1,0 +1,41 @@
+#N canvas 0 0 471 575 10;
+#X obj 7 29 ctlin;
+#X obj 49 29 pgmin;
+#X obj 92 28 bendin;
+#X obj 143 27 touchin;
+#X obj 204 27 polytouchin;
+#X obj 289 27 midiin;
+#X obj 340 26 sysexin;
+#X obj 6 85 noteout;
+#X obj 63 84 ctlout;
+#X obj 160 84 bendout;
+#X obj 217 83 touchout;
+#X obj 281 82 polytouchout;
+#X obj 370 82 midiout;
+#X obj 113 84 pgmout;
+#X obj 11 153 makenote;
+#X text 10 194 MIDI notes deconstruction:;
+#X text 8 128 MIDI note construction:;
+#X text 8 58 MIDI output:;
+#X text 8 2 MIDI input:;
+#X obj 15 226 stripnote;
+#X text 11 266 Additional useful objects for MIDI processing (Maxlib
+by Olaf Matthes);
+#X obj 148 297 chord;
+#X obj 109 296 borax;
+#X obj 54 296 score o;
+#X obj 13 296 pitch;
+#X text 15 336 Also \, from cyclone (alpha) by Krzysztof Czaja:;
+#X obj 16 359 midiformat;
+#X obj 172 359 midiflush;
+#X obj 98 359 midiparse;
+#X text 15 386 and xeq \, from the same developer;
+#X obj 16 421 xeq;
+#X text 41 402 an experimental MIDI sequencer;
+#X text 334 541 derek@umatic.nl;
+#X text 15 523 http://www.davesabine.com/media/puredata_pddpfiles.asp
+;
+#X text 14 466 This document was adapted from the Pure Data Documentation
+Project \, updated for PD version 0.35 test 29 by Dave Sabine as part
+of a project called pddp proposed by Krzysztof Czaja to build comprehensive
+documentation for PD.;

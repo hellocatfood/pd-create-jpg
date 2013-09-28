@@ -1,0 +1,83 @@
+#N canvas 482 76 610 598 10;
+#X obj 122 368 mtof;
+#X floatatom 122 345 5 0 0 0 - #0-pit -;
+#X obj 39 409 lop~;
+#X obj 42 204 noise~;
+#X text 174 344 <-- cutoff (pitch units);
+#X text 185 391 <-- cutoff (Hertz);
+#X floatatom 122 393 5 0 0 0 - - -;
+#X text 82 411 low-pass filter;
+#X obj 368 481 tabwrite~ H01-graph;
+#X obj 392 398 metro 250;
+#X obj 392 378 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X text 410 375 graphing on/off;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array H01-graph 882 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 882 -1 200 140 1;
+#X restore 364 186 graph;
+#X text 388 328 --- 0.02 sec ---;
+#X text 28 61 The lop~ object is normalized to pass DC (the lowest
+frequency) with a gain of one. Higher frequencies are progressively
+more and more attenuated. The lower the cutoff frequency \, the lower
+the total power of the filtered noise. If you graph the output you'll
+see that the waveform gets smoother (and smaller overall) as the cutoff
+frequency is lowered.;
+#N canvas 0 0 450 300 loadbang 0;
+#X obj 85 16 loadbang;
+#X obj 85 40 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 85 59 f \$0;
+#X text 18 179 boxes.;
+#X text 16 161 This subpatch loads initial values in number;
+#X msg 84 83 \; \$1-pit 60;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X restore 461 542 pd loadbang;
+#X obj 41 533 stereo-out~;
+#X text 32 181 white noise;
+#X obj 115 233 ssampler~;
+#X text 118 214 sample;
+#X text 193 18 LOW-PASS FILTER;
+#X obj 39 431 lop~;
+#X obj 39 453 lop~;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 21 0;
+#X connect 6 0 2 1;
+#X connect 6 0 21 1;
+#X connect 6 0 22 1;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 18 0 2 0;
+#X connect 21 0 22 0;
+#X connect 22 0 16 0;
+#X connect 22 0 16 1;

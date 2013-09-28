@@ -1,0 +1,58 @@
+#N canvas 340 56 688 673 10;
+#X text 41 26 LOOPING SAMPLER;
+#X text 39 52 Since [phasor~] continuously ramps from 0 to 1 \, it
+is used here to drive the reading of a [tabread4~] in order to produce
+a looping sampler. The frequency of the [phasor~] determines the playback
+speed.;
+#X obj 115 587 stereo-out~;
+#X obj 116 501 +~ 1;
+#X obj 116 427 phasor~;
+#X floatatom 131 304 5 0 0 0 - - -;
+#X obj 116 398 * 1;
+#X obj 127 378 t b f;
+#X obj 116 476 *~;
+#X obj 150 459 r samples;
+#X msg 128 353 -1;
+#X msg 127 332 1;
+#X text 163 353 <- reverse;
+#X floatatom 116 254 5 0 0 2 transpose - -;
+#X obj 99 218 hsl 80 15 -30 30 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3950 1;
+#X msg 96 198 0;
+#X obj 96 177 loadbang;
+#X obj 116 278 expr 1/($f2/44100)+$f1/1000;
+#X obj 270 231 r samples;
+#X obj 270 253 t b f;
+#X obj 116 527 tabread4~ sampleloop;
+#X obj 436 373 table sampleloop;
+#X obj 436 237 openpanel;
+#X obj 436 300 soundfiler;
+#X msg 436 269 read -resize \$1 sampleloop;
+#X obj 436 327 s samples;
+#X text 433 172 load sample:;
+#X obj 436 199 bng 25 250 50 0 empty empty empty 17 7 0 10 -62784 -1
+-1;
+#X connect 3 0 20 0;
+#X connect 4 0 8 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 7 1 6 1;
+#X connect 8 0 3 0;
+#X connect 9 0 8 1;
+#X connect 10 0 7 0;
+#X connect 11 0 7 0;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
+#X connect 17 0 5 0;
+#X connect 17 0 6 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 19 1 17 1;
+#X connect 20 0 2 0;
+#X connect 20 0 2 1;
+#X connect 22 0 24 0;
+#X connect 23 0 25 0;
+#X connect 24 0 23 0;
+#X connect 27 0 22 0;

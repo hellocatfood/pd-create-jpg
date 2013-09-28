@@ -1,0 +1,48 @@
+#N canvas 20 172 450 300 10;
+#X obj 341 89 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 321 67 gemhead -10;
+#X obj 241 344 pix_record;
+#X obj 260 313 cnv 15 145 25 empty empty empty 20 12 0 14 -225271 -66577
+0;
+#X msg 270 317 bang;
+#X msg 342 317 auto \$1;
+#X obj 323 318 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 250 241 cnv 15 155 65 empty empty empty 20 12 0 14 -225271 -66577
+0;
+#X obj 254 243 bng 15 250 50 0 empty empty empty 0 -6 0 8 -258699 -1
+-1;
+#N canvas 0 0 450 300 savepanel 0;
+#X obj 114 62 inlet;
+#X obj 114 254 outlet;
+#X obj 114 199 t b a;
+#X obj 114 125 savepanel;
+#X msg 114 162 set file \$1;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X restore 274 242 pd savepanel;
+#X msg 310 285 record \$1;
+#X obj 290 287 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 255 290 t a;
+#X floatatom 329 347 5 0 0 0 - - -;
+#X msg 253 262 file /home/hellocatfood/aaa.mov;
+#X obj 321 107 pix_snap 0 0 1336 768;
+#X connect 0 0 15 0;
+#X connect 1 0 0 0;
+#X connect 1 0 15 0;
+#X connect 2 1 13 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 14 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 2 0;
+#X connect 14 0 12 0;
+#X connect 15 0 2 0;

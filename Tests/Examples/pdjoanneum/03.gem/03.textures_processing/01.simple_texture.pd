@@ -1,0 +1,50 @@
+#N canvas 724 51 715 370 10;
+#X msg 17 19 create;
+#X msg 34 44 destroy;
+#X obj 74 98 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X msg 56 70 reset;
+#X obj 17 165 loadbang;
+#X msg 17 189 \; renderinit 0;
+#X obj 120 77 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X msg 120 95 lighting \$1;
+#X obj 17 133 gemwin 50;
+#X obj 270 55 gemhead;
+#X obj 270 171 pix_texture;
+#X obj 270 143 pix_image;
+#X obj 270 36 tgl 15 0 empty renderinit empty 0 -6 0 8 -262144 -1 -1
+0 1;
+#X msg 498 80 open \$1;
+#X obj 498 59 openpanel;
+#X obj 498 41 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 270 302 rotateXYZ;
+#X floatatom 328 269 5 0 0 0 - - -;
+#X msg 488 218 quality \$1;
+#X obj 488 199 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 270 340 square 2;
+#X text 572 59 Load JPG files...;
+#X text 130 337 by Aymeric Mansoux;
+#X msg 426 132 open ../../06.data/02.pix/icebergs.jpg;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 3 0 8 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 11 0;
+#X connect 10 0 16 0;
+#X connect 11 0 10 0;
+#X connect 12 0 9 0;
+#X connect 13 0 11 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 20 0;
+#X connect 17 0 16 3;
+#X connect 17 0 16 2;
+#X connect 18 0 10 0;
+#X connect 19 0 18 0;
+#X connect 23 0 11 0;

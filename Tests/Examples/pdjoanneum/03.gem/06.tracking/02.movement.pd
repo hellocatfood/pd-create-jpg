@@ -1,0 +1,44 @@
+#N canvas 780 83 468 517 10;
+#X text 29 469 Max Neupert \, GMU - Bauhaus University Weimar 2008
+;
+#X obj 31 136 gemwin;
+#X msg 31 80 create \, 1;
+#X msg 39 106 0 \, destroy;
+#X obj 129 80 gemhead;
+#X obj 129 269 pix_texture;
+#X obj 129 329 rectangle 4 3;
+#X text 237 75 This is a render-chain.;
+#X text 239 89 Always start it with gemhead.;
+#X text 237 118 takes the video image from your camera;
+#X text 241 273 textures the video image;
+#X text 242 331 onto an rectangle;
+#X obj 129 145 pix_rgba;
+#X text 237 147 converts the colorspace;
+#X obj 129 216 pix_movement 0.2;
+#X obj 129 243 alpha;
+#X obj 172 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 240 215 compares the frames;
+#X text 240 242 enables the alpha channel;
+#X text 36 408 use;
+#X obj 64 409 pix_blob;
+#X text 123 408 to express the detected movement in a number.;
+#X text 35 389 Challenge:;
+#X obj 129 117 pix_video;
+#X obj 129 299 mn-flip;
+#X floatatom 222 192 5 0 1 0 - - -;
+#X text 264 191 threshold;
+#X text 29 17 the pix_movement object creates a black and white image
+(a bitmap) from the difference to the previous frame with a threshold.
+;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 23 0;
+#X connect 5 0 24 0;
+#X connect 12 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 5 0;
+#X connect 16 0 15 0;
+#X connect 23 0 12 0;
+#X connect 24 0 6 0;
+#X connect 25 0 14 1;

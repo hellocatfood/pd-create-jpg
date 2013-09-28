@@ -1,0 +1,16 @@
+#N canvas 648 18 657 587 10;
+#X obj 188 239 ssampler~;
+#X obj 210 169 noise~;
+#X obj 152 168 adc~;
+#X text 18 14 LOGARITHMIC SPECTRUM;
+#X obj 40 349 spectrum~;
+#X obj 40 217 osc~ 440;
+#X floatatom 40 192 5 0 0 0 - - -;
+#X text 17 49 This draws a spectrum \, like in the first example \,
+but it scales the frequency axis logarithmically.;
+#X text 17 83 The parameter "smooth" is a temporal low pass filter.
+If you make it high you have to wait long \, but you will get an averaged
+spectrum !;
+#X connect 1 0 4 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;

@@ -1,0 +1,57 @@
+#N canvas 140 135 652 452 10;
+#X obj 32 109 bng 25 250 50 0 empty empty empty 0 -6 0 8 -258699 -1
+-1;
+#X text 74 115 <---The "start bang"!;
+#X obj 32 314 mtof;
+#X obj 32 347 osc~ 440;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array pitch_envelope 100 float 3;
+#A 0 110.821 109.914 109.007 108.1 107.193 105.379 105.378 104.471
+103.564 101.75 99.9357 98.1214 96.3071 95.4 94.4928 94.4928 90.8643
+89.9571 89.05 85.4214 85.4214 85.4214 83.6072 83.6072 81.7929 81.7929
+79.9786 78.1643 78.1643 78.1643 76.3501 76.3501 74.5358 74.5358 74.5358
+74.5358 72.7215 72.7215 71.8144 70.9072 70.9072 70.3025 69.6977 69.0929
+67.2787 67.2787 66.3715 65.4644 65.4644 65.4644 63.6501 63.6501 63.6501
+61.8358 61.8358 61.8358 60.9287 60.0216 60.0216 60.0216 58.2073 58.2073
+56.393 56.393 56.393 56.393 56.393 56.393 55.4859 54.5787 54.5787 54.5787
+54.5787 54.5787 54.5787 53.6716 52.7645 50.9502 50.3454 49.7407 49.1359
+48.5311 47.9264 47.3216 47.3216 46.1121 44.9026 43.6931 42.4835 41.274
+40.0645 40.0645 40.0645 40.0645 40.0645 40.0645 40.0645 40.0645 38.2502
+36.436;
+#X coords 0 127 99 0 200 140 1;
+#X restore 366 91 graph;
+#X obj 32 259 line;
+#X obj 32 287 tabread4 pitch_envelope;
+#X obj 32 225 pack 99 0;
+#X floatatom 90 201 5 0 0 1 note_length_in_ms - -;
+#X obj 32 142 t b b;
+#X msg 62 168 0;
+#X text 99 168 First set the [line] to 0!;
+#X text 31 15 You can also use a table to draw or store information
+such as events over time:;
+#X text 305 248 Draw a pitch envelope with your mouse!;
+#X text 233 366 Right-click on the table to set min/max X and Y values
+as well as the name of the table.;
+#X text 232 286 [tabread] and [tabread4] read numbers stored in a table.
+They take the location on the table as input \, and output the value
+of that location. [tabread4] includes 4-point interpolation between
+the values. The creation argument is the name of the table to be read.
+;
+#X text 99 226 Go to position 99 in X ms.;
+#X obj 32 57 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 32 81 metro 1100;
+#X obj 31 383 stereo-out~;
+#X connect 0 0 9 0;
+#X connect 2 0 3 0;
+#X connect 3 0 19 0;
+#X connect 3 0 19 1;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 9 1 10 0;
+#X connect 10 0 5 0;
+#X connect 17 0 18 0;
+#X connect 18 0 0 0;

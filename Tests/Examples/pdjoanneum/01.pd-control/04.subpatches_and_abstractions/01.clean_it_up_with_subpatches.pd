@@ -1,0 +1,79 @@
+#N canvas 165 74 542 400 10;
+#X obj 280 191 cnv 15 160 170 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 297 315 hsl 128 15 0 1000 0 0 empty empty decay -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 297 259 hsl 128 15 0 1000 0 0 empty empty sustain -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 296 207 hsl 128 15 0 1000 0 0 empty empty attack -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 308 227 5 0 0 0 - - -;
+#X floatatom 309 279 5 0 0 0 - - -;
+#X floatatom 309 335 5 0 0 0 - - -;
+#X obj 12 339 print;
+#X floatatom 56 339 5 0 0 0 - - -;
+#X obj 12 197 bng 25 250 50 0 empty empty empty 0 -6 0 8 -258699 -1
+-1;
+#X text 60 203 <---The "start bang"!;
+#X text 281 373 derek@umatic.nl;
+#N canvas 85 77 767 421 this_is_a_subpatch 0;
+#X obj 26 17 inlet start_bang;
+#X obj 160 17 inlet attack;
+#X obj 271 17 inlet sustain;
+#X obj 381 17 inlet decay;
+#X obj 26 390 outlet;
+#X obj 241 208 delay;
+#X msg 26 142 1;
+#X obj 26 348 line;
+#X obj 26 173 pack 0 0;
+#X obj 77 142 f;
+#X obj 292 262 f;
+#X obj 241 230 t b b;
+#X msg 241 262 0;
+#X obj 241 293 pack 0 0;
+#X obj 26 110 t b b;
+#X text 338 208 <---Next \, [delay] holds the start bang for X ms.
+;
+#X text 98 173 <---First \, tell [line] to go to 1 in X ms.;
+#X text 341 295 <---Last \, tell [line] to go to 0 in X ms.;
+#X text 629 398 derek@umatic.nl;
+#X text 343 58 The actual object name is [inlet] \, but here we have
+named them with creation arguments to remember what they are for.;
+#X connect 0 0 14 0;
+#X connect 0 0 5 0;
+#X connect 1 0 9 1;
+#X connect 2 0 5 1;
+#X connect 3 0 10 1;
+#X connect 5 0 11 0;
+#X connect 6 0 8 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 1;
+#X connect 10 0 13 1;
+#X connect 11 0 12 0;
+#X connect 11 1 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 7 0;
+#X connect 14 0 6 0;
+#X connect 14 1 9 0;
+#X restore 12 306 pd this_is_a_subpatch;
+#X text 33 171 Use the sliders to set the attack \, sustain and decay
+times.;
+#X text 12 7 You can "hide" messy bits of patch in something called
+a subpatch. To make a subpatch \, make a new object called [pd name_of_subpatch]
+\, where "name_of_subpatch" is chosen by you. A new window will open
+up \, where you can copy/paste or create the objects etc you need.
+Here \, we will use [inlet] and [outlet] objects to send numbers in
+and out of the subpatch. Each subpatch is unique \, unlike an abstraction
+\, which we will see soon.;
+#X text 13 133 Here is our "envelope generator" from the "events over
+time" section.;
+#X connect 1 0 6 0;
+#X connect 1 0 12 3;
+#X connect 2 0 5 0;
+#X connect 2 0 12 2;
+#X connect 3 0 4 0;
+#X connect 3 0 12 1;
+#X connect 9 0 12 0;
+#X connect 12 0 7 0;
+#X connect 12 0 8 0;

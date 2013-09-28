@@ -1,0 +1,9 @@
+#N canvas 442 292 449 219 10;
+#X obj 2 18 cnv 15 200 50 empty empty \$1-abstraction 20 12 0 14 -24198
+-66577 0;
+#X obj 41 49 hsl 128 15 0 127 0 0 \$1-slider empty \$1-slider -2 -6
+0 8 -262144 -1 -1 0 1;
+#X obj 238 40 outlet;
+#X obj 238 14 r \$1-slider;
+#X connect 3 0 2 0;
+#X coords 0 0 1 1 204 70 1 0 0;

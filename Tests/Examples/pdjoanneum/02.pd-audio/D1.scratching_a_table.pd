@@ -1,0 +1,33 @@
+#N canvas 118 188 809 360 10;
+#X msg 174 48 bang;
+#X obj 174 79 openpanel;
+#X obj 174 142 soundfiler;
+#X floatatom 174 174 0 0 0 1 table_length_in_samples - -;
+#X msg 174 111 read -resize \$1 second_sound;
+#X obj 174 196 table second_sound;
+#X obj 83 23 hsl 200 15 0 100 0 0 empty empty scratch_it_baby! -2 -6
+0 8 -262144 -1 -1 4400 1;
+#X obj 80 174 *;
+#X obj 80 145 / 100;
+#X obj 80 247 tabread4~ second_sound;
+#X obj 80 221 line~;
+#X text 368 222 Here we are "scratching" a table to play it back. [tabread4~]
+is used to read the table holding the audio. We have a slider set up
+to go from 0% of the soundfile to 100% of the sound file (i.e. from
+the first to the last sample). You will only get sound while moving
+the slider. Note that [tabread4~] can ONLY be read by an audio signal.
+;
+#X obj 80 196 pack 0 150;
+#X obj 81 289 stereo-out~;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 2 0 7 1;
+#X connect 4 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 12 0;
+#X connect 8 0 7 0;
+#X connect 9 0 13 0;
+#X connect 9 0 13 1;
+#X connect 10 0 9 0;
+#X connect 12 0 10 0;

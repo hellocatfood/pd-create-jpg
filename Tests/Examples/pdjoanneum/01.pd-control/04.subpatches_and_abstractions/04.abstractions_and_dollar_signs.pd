@@ -1,0 +1,95 @@
+#N canvas 45 51 943 700 10;
+#X floatatom 16 129 5 0 0 0 - - -;
+#X obj 16 46 any_old_abstraction;
+#X floatatom 237 130 5 0 0 0 - - -;
+#X obj 17 195 any_other_abstraction 1;
+#X floatatom 17 275 5 0 0 0 - - -;
+#X floatatom 236 275 5 0 0 0 - - -;
+#X floatatom 16 591 5 0 0 0 - - -;
+#X floatatom 213 590 5 0 0 0 - - -;
+#X floatatom 256 590 5 0 0 0 - - -;
+#X floatatom 453 589 5 0 0 0 - - -;
+#X text 15 175 \$1 [\$2 \, \$3 \, \$4...$n] are input variables.;
+#X text 14 12 \$0 is a unique random number for each saved patch or
+abstraction.;
+#X text 519 11 THE DOLLAR THING EXPLAINED IN EXAMPLES;
+#X text 457 49 Open up one of "any_old_abstraction" and look at the
+properties of the canvas \, the slider and the receive inside. \$0
+is a different number for each abstraction \, but remains consistant
+inside that abstraction. Note that there is *no* creation argument
+given in these patches.;
+#X floatatom 237 390 5 0 0 0 - - -;
+#X obj 508 476 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 505 499 s \$0-slider;
+#X text 14 615 Notice that moving the first two sliders will cause
+the numbers in the patches above to change. \$0 respects the border
+of the abstractions \, but \$1 [\$2 \, \$3...$n] do not!;
+#X obj 506 534 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 503 557 s 3-slider;
+#X obj 676 534 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 673 557 s 4-slider;
+#X text 455 192 \$1 [\$2 \, \$3 \, \$4...$n] take their value from
+input \, in this case creation arguments. Open up "any_other_abstraction"
+and look at the properties of the canvas \, slider and receive to see
+the difference. The 1 and the 2 are only creation arguments.;
+#X text 498 587 These sliders can communicate with any $n-receive inside
+an abstraction using the same number as a creation argument.;
+#X text 14 430 Putting it all together: these patches have a canvas
+named \$0-abstraction \, and two sliders \, each named \$1-slider and
+\$2-slider.;
+#X text 503 440 This \$0-slider can only communicate with a $n-receive
+in an abstraction with \$0 as a creation arument!;
+#X obj 237 47 any_old_abstraction;
+#X obj 236 195 any_other_abstraction 2;
+#X obj 237 310 any_other_abstraction \$0;
+#N canvas 58 300 854 385 funny_thing_about_1053 0;
+#X obj 68 71 cnv 15 200 90 empty empty empty 20 12 0 14 -44926 -66577
+0;
+#X obj 73 102 f \$0;
+#X msg 73 78 bang;
+#X floatatom 73 126 5 0 0 0 - - -;
+#X obj 123 102 f \$0;
+#X msg 123 78 bang;
+#X floatatom 123 126 5 0 0 0 - - -;
+#X obj 173 102 f \$0;
+#X msg 173 78 bang;
+#X floatatom 173 126 5 0 0 0 - - -;
+#X obj 223 102 f \$0;
+#X msg 223 78 bang;
+#X floatatom 223 126 5 0 0 0 - - -;
+#X text 63 176 Don't forget to bang them all!:-);
+#X text 21 21 Watch out! \$0 will be the *same* unique number each
+time in this patch \, as show in the objects below:;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X restore 459 157 pd funny_thing_about_1053;
+#X text 457 134 Be aware that \$0 has the SAME within the same patch:
+;
+#X text 458 306 The patch on the left shows \$0 being used as a creation
+argument. All \$1 variables inside have been replaced by the value
+of \$0. Note that it is the same number as the "float \$0" objects
+above export.;
+#X obj 256 479 any_last_abstraction 3 4;
+#X text 735 663 derek@umatic.nl;
+#X obj 16 479 any_last_abstraction 1 2;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 15 0 16 0;
+#X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 26 0 2 0;
+#X connect 27 0 5 0;
+#X connect 28 0 14 0;
+#X connect 32 0 8 0;
+#X connect 32 1 9 0;
+#X connect 34 0 6 0;
+#X connect 34 1 7 0;

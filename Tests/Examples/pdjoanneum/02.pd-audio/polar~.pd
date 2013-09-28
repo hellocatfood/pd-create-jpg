@@ -1,0 +1,15 @@
+#N canvas 644 381 364 230 10;
+#X obj 29 70 inlet~;
+#X obj 221 74 inlet~;
+#X text 76 18 rectangular to polar coordinates;
+#X obj 29 183 outlet~;
+#X obj 220 178 outlet~;
+#X text 42 52 Re;
+#X text 232 58 Im;
+#X text 49 202 R;
+#X text 232 200 Phi;
+#X obj 29 119 expr~ sqrt($v1*$v1+$v2*$v2) \; atan2($v2 \, $v1);
+#X connect 0 0 9 0;
+#X connect 1 0 9 1;
+#X connect 9 0 3 0;
+#X connect 9 1 4 0;

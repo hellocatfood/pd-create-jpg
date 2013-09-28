@@ -1,0 +1,68 @@
+#N canvas 194 58 644 812 10;
+#X obj 49 241 throw~ signal1;
+#X floatatom 324 207 0 0 0 0 - - -;
+#X obj 42 275 sig~ 50;
+#X obj 324 183 snapshot~;
+#X obj 49 166 sig~ 25;
+#X obj 324 159 catch~ signal1;
+#X text 23 96 Any number of throw~ objects can add into one catch~
+object (but two catch~ objects cannot share the same name.);
+#X floatatom 324 286 0 0 0 0 - - -;
+#X obj 324 262 snapshot~;
+#X obj 324 234 catch~ signal2;
+#X msg 65 193 set signal2;
+#X msg 66 217 set signal1;
+#X text 27 334 You can redirect throw~ via a "set" message.;
+#X floatatom 250 685 0 0 0 0 - - -;
+#X obj 41 597 sig~ 50;
+#X obj 250 660 snapshot~;
+#X obj 407 643 metro 200;
+#X floatatom 42 573 4 0 0 0 - - -;
+#X text 32 458 A send~ object copies its input to a local buffer which
+all receive~ objects of the same name read from. They may be in different
+windows or even different patches. Any number of receives may be associated
+with one send~ but it is an error to have two send~s of the same name.
+;
+#X obj 40 660 sig~ 25;
+#X text 37 741 Receive~ takes "set" messages to switch between send~s.
+;
+#X obj 407 622 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 441 193 metro 200;
+#X obj 441 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 42 303 throw~ signal2;
+#X obj 41 620 send~ signal3;
+#X obj 40 688 send~ signal4;
+#X msg 261 586 set signal4;
+#X msg 262 608 set signal3;
+#X obj 250 636 receive~ signal3;
+#X text 32 422 SEND~/RECEIVE~ - one-to-many nonlocal signal connections
+;
+#X text 23 64 THROW~/CATCH~ - summing signal bus and non-local connection
+;
+#X text 181 16 AUDIO BUS;
+#X floatatom 49 145 5 0 0 0 - - -;
+#X text 107 158 <- convert message to signal;
+#X text 405 264 <- convert signal to message;
+#X connect 2 0 24 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 14 0 25 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 14 0;
+#X connect 19 0 26 0;
+#X connect 21 0 16 0;
+#X connect 22 0 8 0;
+#X connect 22 0 3 0;
+#X connect 23 0 22 0;
+#X connect 27 0 29 0;
+#X connect 28 0 29 0;
+#X connect 29 0 15 0;
+#X connect 33 0 4 0;
