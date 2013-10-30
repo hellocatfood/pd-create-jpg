@@ -1,5 +1,5 @@
-#N canvas 149 348 789 259 10;
-#N canvas 50 17 929 1001 glitch 0;
+#N canvas 645 380 789 259 10;
+#N canvas 709 50 929 1001 glitch 0;
 #X obj 479 40 cnv 15 124 70 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X obj 193 333 mrpeach/binfile;
@@ -17,7 +17,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/1_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_1_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -26,7 +26,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_1;
-#X msg 385 209 set write \$1/1_\$2;
+#X msg 385 209 set write \$1glitch_1_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -70,7 +70,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/2_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_2_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -79,7 +79,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_2;
-#X msg 385 209 set write \$1/2_\$2;
+#X msg 385 209 set write \$1glitch_2_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -129,10 +129,10 @@
 #X obj 455 186 r write;
 #X text 524 51 period;
 #X text 524 81 data;
-#X msg 385 246 write /home/hellocatfood/Desktop/3_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_3_hellocatfood.jpg
 ;
 #X obj 281 247 s offnum_3;
-#X msg 385 209 set write \$1/3_\$2;
+#X msg 385 209 set write \$1glitch_3_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -176,7 +176,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/4_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_4_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -185,7 +185,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_4;
-#X msg 385 209 set write \$1/4_\$2;
+#X msg 385 209 set write \$1glitch_4_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -229,7 +229,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/5_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_5_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -238,7 +238,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_5;
-#X msg 385 209 set write \$1/5_\$2;
+#X msg 385 209 set write \$1glitch_5_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -282,7 +282,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/6_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_6_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -291,7 +291,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_6;
-#X msg 385 209 set write \$1/6_\$2;
+#X msg 385 209 set write \$1glitch_6_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -335,7 +335,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/7_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_7_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -344,7 +344,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_7;
-#X msg 385 209 set write \$1/7_\$2;
+#X msg 385 209 set write \$1glitch_7_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -388,7 +388,7 @@
 #X obj 156 170 random 255;
 #X obj 156 140 r rand_byte;
 #X obj 296 -10 r rand_off;
-#X msg 385 246 write /home/hellocatfood/Desktop/8_hellocatfood.jpg
+#X msg 385 246 write /home/hellocatfood/Desktop/glitch_8_hellocatfood.jpg
 ;
 #X obj 193 -28 r go;
 #X obj 385 186 r savedir;
@@ -397,7 +397,7 @@
 #X text 524 51 period;
 #X text 524 81 data;
 #X obj 281 247 s offnum_8;
-#X msg 385 209 set write \$1/8_\$2;
+#X msg 385 209 set write \$1glitch_8_\$2;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
@@ -423,7 +423,7 @@
 #X connect 24 0 16 0;
 #X coords 0 -1 1 1 124 70 1 479 40;
 #X restore 429 -458 pd glitch;
-#N canvas 906 17 929 1001 openfile 0;
+#N canvas 61 62 929 1001 openfile 0;
 #X obj 63 -6 cnv 15 150 40 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 69 59 openpanel;
@@ -443,8 +443,6 @@
 #X obj 129 203 s clear;
 #X obj 351 122 pack s s;
 #X obj 351 143 s savedir;
-#X obj 294 92 unpack s s;
-#X obj 294 72 moonlib/basedir;
 #X obj 396 92 stripdir;
 #X obj 294 42 t s s;
 #X obj 69 89 t b b b s b b;
@@ -456,7 +454,64 @@
 #X obj 139 59 t b b b b;
 #X obj 127 472 s length;
 #X obj 396 193 outlet;
-#X connect 1 0 20 0;
+#N canvas 1057 289 450 300 get 0;
+#X obj 133 -63 s2l;
+#X msg 163 -86 symbol;
+#N canvas 710 340 450 300 drip 0;
+#X obj 75 213 list split 1;
+#X obj 75 133 until;
+#X obj 75 168 list append;
+#X obj 205 213 bang;
+#X obj 75 101 t b l;
+#X obj 75 67 inlet;
+#X obj 75 255 outlet;
+#X text 234 104 see list-help.pd;
+#X obj 158 255 outlet;
+#X connect 0 0 6 0;
+#X connect 0 1 2 1;
+#X connect 0 2 3 0;
+#X connect 0 2 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 0;
+#X connect 4 1 2 1;
+#X connect 5 0 4 0;
+#X restore 133 -19 pd drip;
+#X obj 177 150 f;
+#X symbolatom 133 -158 10 0 0 0 - - -, f 10;
+#X obj 133 -136 t a b;
+#X obj 133 4 b;
+#X obj 169 89 + 1;
+#X msg 218 -87 1;
+#X obj 133 90 f 1;
+#X obj 177 242 stripfilename;
+#X obj 177 191 * -1;
+#X msg 177 212 set \$1;
+#X obj 203 -188 inlet;
+#X obj 127 211 inlet;
+#X obj 177 272 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 1;
+#X connect 2 0 6 0;
+#X connect 2 1 3 0;
+#X connect 3 0 11 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;
+#X connect 5 1 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 1;
+#X connect 8 0 9 1;
+#X connect 9 0 3 1;
+#X connect 9 0 7 0;
+#X connect 10 0 15 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X connect 13 0 4 0;
+#X connect 14 0 10 0;
+#X restore 294 92 pd get path;
+#X connect 1 0 18 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
 #X connect 4 0 6 0;
@@ -468,27 +523,27 @@
 #X connect 8 0 6 0;
 #X connect 8 0 13 0;
 #X connect 9 0 10 0;
-#X connect 10 0 26 0;
+#X connect 10 0 24 0;
 #X connect 12 0 6 0;
 #X connect 14 0 15 0;
-#X connect 16 1 14 0;
-#X connect 17 0 16 0;
-#X connect 18 0 14 1;
-#X connect 18 0 27 0;
-#X connect 19 0 17 0;
-#X connect 19 1 18 0;
-#X connect 20 0 7 0;
-#X connect 20 1 12 0;
-#X connect 20 2 4 0;
-#X connect 20 3 3 0;
-#X connect 20 3 19 0;
-#X connect 20 4 8 0;
-#X connect 20 5 21 0;
-#X connect 23 0 25 0;
-#X connect 25 0 7 0;
-#X connect 25 1 4 0;
-#X connect 25 2 8 0;
-#X connect 25 3 21 0;
+#X connect 16 0 25 0;
+#X connect 16 0 14 1;
+#X connect 16 0 26 1;
+#X connect 17 0 26 0;
+#X connect 17 1 16 0;
+#X connect 18 0 7 0;
+#X connect 18 1 12 0;
+#X connect 18 2 4 0;
+#X connect 18 3 3 0;
+#X connect 18 3 17 0;
+#X connect 18 4 8 0;
+#X connect 18 5 19 0;
+#X connect 21 0 23 0;
+#X connect 23 0 7 0;
+#X connect 23 1 4 0;
+#X connect 23 2 8 0;
+#X connect 23 3 19 0;
+#X connect 26 0 14 0;
 #X coords 0 -1 1 1 150 40 1 63 -6;
 #X restore 9 -636 pd openfile;
 #N canvas 253 88 450 300 go 0;
