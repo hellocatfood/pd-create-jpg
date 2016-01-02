@@ -1,29 +1,31 @@
-#N canvas 463 120 998 539 10;
-#X obj 444 -533 tgl 20 0 empty empty empty 17 7 0 10 -4034 -1 -1 0
-1;
-#X obj 444 -29 mrpeach/binfile;
-#X msg 264 -99 clear;
-#X text 470 -534 fill the jpg with random data;
-#X text 780 -91 save the jpg file;
-#X obj 264 -126 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
-#X text 290 -127 start again;
-#X msg 674 -89 write /home/hellocatfood/Desktop/PD_Jpeg/01. Flip-Top
-Box.mp3;
-#N canvas 1553 195 450 300 randomnumbers 0;
+#N canvas 1072 263 539 197 10;
+#N canvas 58 82 929 997 guts 1;
+#X obj 0 0 cnv 15 230 180 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X obj 250 0 cnv 15 120 80 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 250 100 cnv 15 120 80 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 390 0 cnv 15 120 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 260 10 tgl 20 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
+#X obj 120 770 mrpeach/binfile;
+#X msg 447 220 clear;
+#N canvas 185 200 450 300 randomnumbers 0;
 #X obj 45 -239 random 255;
-#X floatatom 45 -219 5 0 0 0 - - -;
+#X floatatom 45 -219 5 0 0 0 - - -, f 5;
 #X obj 44 -259 metro 2;
 #X obj 115 -239 random 255;
-#X floatatom 115 -219 5 0 0 0 - - -;
+#X floatatom 115 -219 5 0 0 0 - - -, f 5;
 #X obj 114 -259 metro 2;
 #X obj 45 -109 outlet;
 #X obj 44 -339 inlet;
 #X obj 185 -239 random 255;
-#X floatatom 185 -219 5 0 0 0 - - -;
+#X floatatom 185 -219 5 0 0 0 - - -, f 5;
 #X obj 184 -259 metro 2;
 #X obj 255 -239 random 255;
-#X floatatom 255 -219 5 0 0 0 - - -;
+#X floatatom 255 -219 5 0 0 0 - - -, f 5;
 #X obj 254 -259 metro 2;
 #X connect 0 0 1 0;
 #X connect 1 0 6 0;
@@ -41,16 +43,14 @@ Box.mp3;
 #X connect 11 0 12 0;
 #X connect 12 0 6 0;
 #X connect 13 0 11 0;
-#X restore 444 -503 pd randomnumbers;
-#X msg 674 -149 255 217;
-#X obj 604 -449 openpanel;
-#X obj 604 -478 bng 25 250 50 0 empty open empty 17 7 0 10 -228856
--258113 -1;
-#X msg 604 -389 set read \$1;
-#X msg 604 -359 read /home/hellocatfood/Desktop/PD_Jpeg/01. Flip-Top
-Box.mp3;
-#X msg 674 -189 writeat 0;
-#N canvas 287 92 452 685 640x480 0;
+#X restore 260 350 pd randomnumbers;
+#X msg 624 568 255 217;
+#X obj 590 130 openpanel;
+#X obj 260 111 bng 20 250 50 0 empty open empty 17 7 0 10 -257985 -258113
+-1;
+#X msg 624 200 set read \$1;
+#X msg 607 240 read /home/hellocatfood/Desktop/a.mp3;
+#N canvas 515 77 452 685 640x480 0;
 #X msg 64 -208 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
 17 14 11 11 16 22 16 17 19 20 21 21 21 12 15 23 24 22 20 24 18 20 21
@@ -98,7 +98,7 @@ Box.mp3;
 #X connect 9 0 1 0;
 #X connect 9 1 7 0;
 #X connect 10 0 9 0;
-#X restore 4 -169 pd 640x480;
+#X restore 120 500 pd 640x480;
 #N canvas 439 82 466 685 3648x2736 0;
 #X msg 64 -208 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -147,14 +147,10 @@ Box.mp3;
 #X connect 7 1 10 0;
 #X connect 8 0 7 0;
 #X connect 10 0 4 0;
-#X restore 554 -169 pd 3648x2736;
-#X obj 4 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113 -1
--1;
-#X obj 554 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
+#X restore 215 710 pd 3648x2736;
 #N canvas 1431 54 1375 846 random_size 0;
 #X obj 54 -101 until;
-#X msg 54 -1 20 45 4 6;
+#X msg 54 -1 31 14 0 17;
 #X msg 54 -41 add2 \$1;
 #X msg 124 -41 set;
 #X msg 54 -128 4;
@@ -206,48 +202,7 @@ Box.mp3;
 #X connect 12 0 1 0;
 #X connect 12 1 4 0;
 #X connect 12 2 3 0;
-#X restore 265 -359 pd random_size;
-#X obj 265 -389 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
-#N canvas 1841 164 450 300 something 0;
-#X msg 106 -346 read \$1;
-#X floatatom 106 -210 5 0 0 0 - - -;
-#X obj 256 -310 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 106 -240 mrpeach/binfile;
-#X msg 186 -309 clear;
-#X obj 186 -336 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
-#X obj 106 -366 t s b;
-#X obj 106 -160 spigot;
-#X obj 146 -190 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 256 -270 metro 2;
-#X obj 256 -290 t b f;
-#X obj 257 -240 delay 1800;
-#X connect 0 0 3 0;
-#X connect 2 0 10 0;
-#X connect 3 0 1 0;
-#X connect 3 2 2 0;
-#X connect 4 0 3 0;
-#X connect 5 0 4 0;
-#X connect 6 0 0 0;
-#X connect 6 1 5 0;
-#X connect 9 0 3 0;
-#X connect 10 0 11 0;
-#X connect 10 1 9 0;
-#X connect 11 0 8 0;
-#X restore 755 -282 pd something else;
-#X text 730 -151 end of file marker - not always necessary;
-#X text 740 -191 write bytes to the beginning of a file;
-#X obj 74 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
-#X obj 234 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
-#X obj 314 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
-#X obj 394 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
+#X restore 229 740 pd random_size;
 #N canvas 348 98 457 817 1600x1200 0;
 #X msg 64 -208 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -296,7 +251,7 @@ Box.mp3;
 #X connect 6 1 8 0;
 #X connect 7 0 6 0;
 #X connect 8 0 4 0;
-#X restore 234 -169 pd 1600x1200;
+#X restore 161 590 pd 1600x1200;
 #N canvas 143 82 447 685 2048x1536 0;
 #X msg 64 -208 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -345,7 +300,7 @@ Box.mp3;
 #X connect 7 1 10 0;
 #X connect 8 0 7 0;
 #X connect 10 0 4 0;
-#X restore 314 -169 pd 2048x1536;
+#X restore 175 620 pd 2048x1536;
 #N canvas 472 82 455 685 2592x1944 0;
 #X msg 64 -208 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -394,7 +349,7 @@ Box.mp3;
 #X connect 6 1 10 0;
 #X connect 7 0 6 0;
 #X connect 10 0 4 0;
-#X restore 394 -169 pd 2592x1944;
+#X restore 188 650 pd 2592x1944;
 #N canvas 244 82 458 817 1024x768 0;
 #X msg 64 -408 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -444,9 +399,7 @@ Box.mp3;
 #X connect 7 1 8 0;
 #X connect 8 0 4 0;
 #X connect 10 0 7 0;
-#X restore 74 -169 pd 1024x768;
-#X obj 154 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
+#X restore 133 530 pd 1024x768;
 #N canvas 460 236 453 817 1280x960 0;
 #X msg 64 -408 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -496,9 +449,7 @@ Box.mp3;
 #X connect 7 1 8 0;
 #X connect 8 0 4 0;
 #X connect 10 0 7 0;
-#X restore 154 -169 pd 1280x960;
-#X obj 474 -199 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
--1 -1;
+#X restore 147 560 pd 1280x960;
 #N canvas 521 82 449 685 3264x2448 0;
 #X msg 64 -208 255 216 255 219 0 132 0 3 2 2 3 2 2 3 3 3 3 4 3 3 4
 5 8 5 5 4 4 5 10 7 7 6 8 12 10 12 12 11 10 11 11 13 14 18 16 13 14
@@ -547,96 +498,137 @@ Box.mp3;
 #X connect 6 1 10 0;
 #X connect 7 0 6 0;
 #X connect 10 0 4 0;
-#X restore 474 -169 pd 3264x2448;
-#X obj 502 -340 until;
-#X obj 604 -309 mrpeach/binfile;
-#X obj 520 -396 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X restore 202 680 pd 3264x2448;
+#X obj 590 280 until;
+#X obj 590 310 mrpeach/binfile;
+#X obj 590 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 61 -425 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X obj 61 -387 + 1;
-#X text 80 -411 Portrait;
-#X text 80 -428 Landscape;
-#X obj 95 -488 loadbang;
-#X msg 95 -466 0;
-#X msg 657 -235 info;
-#X obj 574 -36 print info;
-#X msg 671 -117 set write \$1;
-#X obj 604 -419 t b b s b;
-#X msg 726 -435 clear;
-#X msg 304 -53 write /home/hellocatfood/Desktop/out.jpg;
-#X obj 326 -489 metro 1;
-#X obj 224 -441 mrpeach/binfile;
-#X obj 217 -493 openpanel;
-#X obj 197 -528 bng 15 250 50 0 empty empty read_any_file_into_buffer
-17 7 0 10 -4032 -258113 -1;
-#X msg 222 -465 read \$1;
-#X msg 220 -403 add2 \$1;
-#X floatatom 204 -422 5 0 0 0 - - -;
-#X obj 328 -464 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 10 10 vradio 18 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 10 428 + 1;
+#X text 29 28 Portrait;
+#X text 29 10 Landscape;
+#X obj 10 -54 loadbang;
+#X msg 10 -32 0;
+#X obj 163 803 print info;
+#X obj 590 160 t b b s b;
+#X msg 641 180 clear;
+#X obj 726 361 stripdir;
+#X obj 624 361 splitfilename;
+#X obj 726 381 splitfilename .;
+#X msg 624 528 write /home/hellocatfood/Desktop/a_hellojpg.jpg;
+#X obj 624 411 pack s s;
+#X obj 120 10 vradio 18 1 0 9 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X text 147 11 640x480;
+#X text 147 29 1024x768;
+#X text 147 47 1280x960;
+#X text 147 65 1600x1200;
+#X text 147 83 2048x1536;
+#X text 147 101 2592x1944;
+#X text 147 119 3264x2448;
+#X text 147 136 3648x2736;
+#X text 147 154 random;
+#X obj 120 460 sel 0 1 2 3 4 5 6 7 8;
+#X obj 624 331 t s s;
+#X obj 260 390 f;
+#X obj 293 390 + 1;
+#X msg 260 460 write hellojpg_11.jpg;
+#X obj 260 40 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X msg 260 410 set write hellojpg_\$1.jpg;
+#X obj 260 430 t b a;
+#X msg 624 441 set write \$1/\$2_hellojpg.jpg;
+#X obj 260 140 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
-#X obj 320 -509 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X connect 0 0 8 0;
-#X connect 1 1 46 0;
-#X connect 2 0 1 0;
-#X connect 2 0 37 0;
-#X connect 5 0 2 0;
-#X connect 7 0 1 0;
-#X connect 8 0 1 0;
-#X connect 9 0 1 0;
-#X connect 10 0 48 0;
-#X connect 11 0 10 0;
-#X connect 12 0 13 0;
-#X connect 13 0 37 0;
-#X connect 14 0 1 0;
-#X connect 15 0 1 0;
-#X connect 16 0 1 0;
-#X connect 17 0 15 0;
-#X connect 18 0 16 0;
-#X connect 19 0 1 0;
-#X connect 20 0 19 0;
-#X connect 24 0 31 0;
-#X connect 25 0 28 0;
-#X connect 26 0 29 0;
-#X connect 27 0 30 0;
-#X connect 28 0 1 0;
-#X connect 29 0 1 0;
-#X connect 30 0 1 0;
-#X connect 31 0 1 0;
-#X connect 32 0 33 0;
-#X connect 33 0 1 0;
-#X connect 34 0 35 0;
-#X connect 35 0 1 0;
-#X connect 36 0 37 0;
-#X connect 37 0 1 0;
-#X connect 37 2 36 1;
-#X connect 38 0 36 0;
-#X connect 39 0 40 0;
-#X connect 40 0 15 1;
-#X connect 40 0 31 1;
-#X connect 40 0 33 1;
-#X connect 40 0 28 1;
-#X connect 40 0 29 1;
-#X connect 40 0 30 1;
-#X connect 40 0 35 1;
-#X connect 40 0 16 1;
-#X connect 43 0 44 0;
-#X connect 44 0 39 0;
-#X connect 45 0 1 0;
-#X connect 47 0 7 0;
-#X connect 48 0 38 0;
-#X connect 48 1 13 0;
-#X connect 48 2 12 0;
-#X connect 48 2 47 0;
-#X connect 48 3 49 0;
-#X connect 49 0 37 0;
-#X connect 50 0 1 0;
-#X connect 51 0 58 0;
-#X connect 52 0 57 0;
-#X connect 53 0 55 0;
-#X connect 54 0 53 0;
-#X connect 55 0 52 0;
-#X connect 57 0 56 0;
-#X connect 58 0 52 0;
-#X connect 59 0 51 0;
+#X obj 644 491 t b b;
+#X text 286 139 save;
+#X obj 120 430 change;
+#X msg 397 220 set 20;
+#X obj 397 14 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X text 423 13 start again;
+#X obj 397 198 t b b;
+#X text 286 9 random data;
+#X text 286 39 save;
+#X text 287 114 open file;
+#X text 286 79 or;
+#X text 386 126 2013 Antonio Roberts;
+#X text 386 146 www.hellocatfood.com;
+#X connect 4 0 7 0;
+#X connect 5 1 31 0;
+#X connect 6 0 5 0;
+#X connect 6 0 23 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 32 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 12 0 23 0;
+#X connect 13 0 5 0;
+#X connect 14 0 5 0;
+#X connect 15 0 5 0;
+#X connect 16 0 5 0;
+#X connect 17 0 5 0;
+#X connect 18 0 5 0;
+#X connect 19 0 5 0;
+#X connect 20 0 5 0;
+#X connect 21 0 5 0;
+#X connect 22 0 23 0;
+#X connect 23 0 5 0;
+#X connect 23 2 22 1;
+#X connect 24 0 22 0;
+#X connect 25 0 26 0;
+#X connect 26 0 13 1;
+#X connect 26 0 19 1;
+#X connect 26 0 20 1;
+#X connect 26 0 16 1;
+#X connect 26 0 17 1;
+#X connect 26 0 18 1;
+#X connect 26 0 21 1;
+#X connect 26 0 14 1;
+#X connect 29 0 30 0;
+#X connect 30 0 25 0;
+#X connect 32 0 24 0;
+#X connect 32 1 12 0;
+#X connect 32 2 11 0;
+#X connect 32 2 50 0;
+#X connect 32 3 33 0;
+#X connect 33 0 23 0;
+#X connect 34 0 36 0;
+#X connect 35 0 38 0;
+#X connect 36 0 38 1;
+#X connect 37 0 5 0;
+#X connect 38 0 57 0;
+#X connect 39 0 61 0;
+#X connect 49 0 13 0;
+#X connect 49 1 19 0;
+#X connect 49 2 20 0;
+#X connect 49 3 16 0;
+#X connect 49 4 17 0;
+#X connect 49 5 18 0;
+#X connect 49 6 21 0;
+#X connect 49 7 14 0;
+#X connect 49 8 15 0;
+#X connect 50 0 35 0;
+#X connect 50 1 34 0;
+#X connect 51 0 52 0;
+#X connect 51 0 55 0;
+#X connect 52 0 51 1;
+#X connect 53 0 5 0;
+#X connect 54 0 51 0;
+#X connect 55 0 56 0;
+#X connect 56 0 53 0;
+#X connect 56 1 53 0;
+#X connect 57 0 37 0;
+#X connect 58 0 59 0;
+#X connect 59 0 37 0;
+#X connect 59 1 8 0;
+#X connect 61 0 49 0;
+#X connect 62 0 61 0;
+#X connect 63 0 65 0;
+#X connect 65 0 62 0;
+#X connect 65 1 6 0;
+#X coords 0 -1 1 1 510 180 1 0 0;
+#X restore 10 -913 pd guts;
+#X coords 0 197 1 196 85 140 0;
