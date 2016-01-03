@@ -1,1 +1,0 @@
-hexdump -v -e '1/1 "%02u "' filename.here > decimalvalues.txt
