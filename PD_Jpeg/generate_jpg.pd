@@ -1,5 +1,5 @@
-#N canvas 1215 246 562 197 10;
-#N canvas 796 26 481 997 guts 1;
+#N canvas 451 220 562 197 10;
+#N canvas 776 14 481 997 guts 0;
 #X obj 0 0 cnv 15 230 180 empty empty empty 20 12 0 14 -260097 -66577
 0;
 #X obj 120 770 mrpeach/binfile;
@@ -101,9 +101,9 @@
 #X connect 8 0 7 0;
 #X connect 10 0 4 0;
 #X restore 215 710 pd 3648x2736;
-#N canvas 1431 54 1375 846 random_size 0;
+#N canvas 127 143 1375 846 random_size 0;
 #X obj 54 -101 until;
-#X msg 54 -1 31 14 0 17;
+#X msg 54 -1 27 36 9 35;
 #X msg 54 -41 add2 \$1;
 #X msg 124 -41 set;
 #X msg 54 -128 4;
@@ -457,11 +457,11 @@
 #X obj 10 428 + 1;
 #X text 29 28 Portrait;
 #X text 29 10 Landscape;
-#X obj 10 -54 loadbang;
+#X obj 10 -74 loadbang;
 #X msg 10 -32 0;
 #X obj 163 803 print info;
 #X obj 120 10 vradio 18 1 0 9 empty empty empty 0 -8 0 10 -262144 -1
--1 6;
+-1 2;
 #X text 147 11 640x480;
 #X text 147 29 1024x768;
 #X text 147 47 1280x960;
@@ -479,6 +479,8 @@
 #X obj 396 703 r savefile;
 #X obj 302 575 r savedata;
 #X msg 267 250 clear;
+#X obj 10 -52 t b b;
+#X msg 37 -32 0;
 #X connect 1 1 17 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
@@ -498,7 +500,7 @@
 #X connect 12 0 7 1;
 #X connect 12 0 10 1;
 #X connect 12 0 3 1;
-#X connect 15 0 16 0;
+#X connect 15 0 36 0;
 #X connect 16 0 11 0;
 #X connect 18 0 29 0;
 #X connect 28 0 2 0;
@@ -518,6 +520,9 @@
 #X connect 33 0 1 0;
 #X connect 34 0 1 0;
 #X connect 35 0 1 0;
+#X connect 36 0 16 0;
+#X connect 36 1 37 0;
+#X connect 37 0 18 0;
 #X coords 0 -1 1 1 230 180 1 0 0;
 #X restore 10 -913 pd guts;
 #N canvas 939 30 450 300 openfile 0;
@@ -528,7 +533,7 @@
 #X obj 110 111 bng 20 250 50 0 empty open empty 17 7 0 10 -257985 -258113
 -1;
 #X msg 195 267 set read \$1;
-#X msg 178 307 read /home/hellocatfood/Scripts/pd-patches/PD_Jpeg/generate_jpg.pd
+#X msg 178 307 read /home/hellocatfood/Desktop/Common\ Property/Sonification\ Studies/Modified/2-11\ Got\ to\ Give\ It\ Up.mp3
 ;
 #X obj 161 347 until;
 #X obj 161 377 mrpeach/binfile;
@@ -539,7 +544,7 @@
 #X obj 297 428 stripdir;
 #X obj 195 428 splitfilename;
 #X obj 297 448 splitfilename .;
-#X msg 195 595 write /home/hellocatfood/Scripts/pd-patches/PD_Jpeg/generate_jpg_hellojpg.jpg
+#X msg 195 595 write /home/hellocatfood/Desktop/Common\ Property/Sonification\ Studies/Modified/2-11\ Got\ to\ Give\ It\ Up_hellojpg.jpg
 ;
 #X obj 195 478 pack s s;
 #X obj 195 398 t s s;
@@ -621,7 +626,7 @@
 #X restore 110 220 pd randomnumbers;
 #X obj 110 300 f;
 #X obj 143 300 + 1;
-#X msg 110 370 write hellojpg_7.jpg;
+#X msg 110 370 write hellojpg_0.jpg;
 #X obj 110 140 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X msg 110 320 set write hellojpg_\$1.jpg;
