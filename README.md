@@ -16,5 +16,8 @@ Instructions
 
 Dependencies
 ------------
+Cyclone
+ggee
+iemlib
 
 This patch has been tested in PD L2Ork v.20151230 on Ubuntu 15.10. It should work on PD-Extended.
