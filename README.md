@@ -16,8 +16,13 @@ Instructions
 
 Dependencies
 ------------
-Cyclone
-ggee
-iemlib
+* Cyclone
+* ggee
+* iemlib
 
 This patch has been tested in PD L2Ork v.20151230 on Ubuntu 15.10. It should work on PD-Extended.
+
+Supercollider version
+---------------------
+
+uiae has written a versino of this script in Supercollider. Check it out [here](https://web.archive.org/web/20131209141144/https://uiae.de/?p=110)
